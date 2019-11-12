@@ -129,10 +129,10 @@ def movies_with_directors_set(source)
   
 
     movie_index = 0
+    title_array = []
     
     while movie_index < source[counter][:movies].length do
       director_hash = {}
-      title_array = []
       director_hash[:director_name] = source[counter][:name]
       director_hash[:title] = source[counter][:movies][movie_index][:title]
       title_array.push(director_hash)
