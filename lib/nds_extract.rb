@@ -120,25 +120,8 @@ def movies_with_directors_set(source)
   
   counter = 0
   
-    while counter < source.length do
-    movie_directors << movies_with_director_key(source[counter][:name], source[counter][:movies])
-    counter += 1
-  end
-  
   while counter < source.length do
-  
-
-    movie_index = 0
-    title_array = []
-    
-    while movie_index < source[counter][:movies].length do
-      director_hash = {}
-      director_hash[:director_name] = source[counter][:name]
-      director_hash[:title] = source[counter][:movies][movie_index][:title]
-      title_array.push(director_hash)
-      movie_directors.push(title_array)
-      movie_index += 1
-    end
+    movie_directors << movies_with_director_key(source[counter][:name], source[counter][:movies])
     counter += 1
   end
   
